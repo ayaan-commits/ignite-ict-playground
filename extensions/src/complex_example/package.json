@@ -1,0 +1,13 @@
+{
+  "name": "complex_example",
+  "version": "1.0.0",
+  "description": "An extension created using the PRG AI Blocks framework",
+  "main": "index.ts",
+  "scripts": {
+    "dir:name": "complex_example",
+    "dev": "pnpm --filter prg-extension-root dev --include complex_example",
+    "test": "pnpm --filter prg-extension-root test complex_example/index.test.ts"
+  },
+  "author": "",
+  "license": "ISC"
+}

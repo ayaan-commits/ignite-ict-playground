@@ -1,0 +1,15 @@
+{
+  "name": "replace-with-package-name",
+  "version": "1.0.0",
+  "description": "An extension created using the PRG AI Blocks framework",
+  "main": "index.ts",
+  "scripts": {
+    "directory": "echo replace-with-directory-name",
+    "test": "pnpm --filter prg-extension-root test replace-with-directory-name/index.test.ts",
+    "dev": "pnpm --filter prg-extension-root dev --include replace-with-directory-name",
+    "add:ui": "pnpm --filter prg-extension-root add:ui replace-with-directory-name",
+    "add:arg": "pnpm --filter prg-extension-root add:arg replace-with-directory-name"
+  },
+  "author": "",
+  "license": "ISC"
+}

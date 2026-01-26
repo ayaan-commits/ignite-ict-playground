@@ -1,0 +1,18 @@
+{
+  "name": "selfie-segmentation-extension",
+  "version": "1.0.0",
+  "description": "An extension created using the PRG AI Blocks framework",
+  "main": "index.ts",
+  "scripts": {
+    "directory": "echo selfieSegmentation",
+    "test": "pnpm --filter prg-extension-root test selfieSegmentation/index.test.ts",
+    "dev": "pnpm --filter prg-extension-root dev --include selfieSegmentation",
+    "add:ui": "pnpm --filter prg-extension-root add:ui selfieSegmentation",
+    "add:arg": "pnpm --filter prg-extension-root add:arg selfieSegmentation"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mediapipe/selfie_segmentation": "^0.1.1675465747"
+  }
+}

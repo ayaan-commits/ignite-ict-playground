@@ -1,0 +1,18 @@
+{
+  "name": "object-detection-extension",
+  "version": "1.0.0",
+  "description": "An extension created using the PRG AI Blocks framework",
+  "main": "index.ts",
+  "scripts": {
+    "directory": "echo objectDetection",
+    "test": "pnpm --filter prg-extension-root test objectDetection/index.test.ts",
+    "dev": "pnpm --filter prg-extension-root dev --include objectDetection",
+    "add:ui": "pnpm --filter prg-extension-root add:ui objectDetection",
+    "add:arg": "pnpm --filter prg-extension-root add:arg objectDetection"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^0.1.0-alpha-12"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "tables-extension",
+  "version": "1.0.0",
+  "description": "An extension created using the PRG AI Blocks framework",
+  "main": "index.ts",
+  "scripts": {
+    "directory": "echo tables",
+    "dev": "pnpm --filter prg-extension-root dev --include tables",
+    "test": "pnpm --filter prg-extension-root test tables/index.test.ts"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "edu_quiz",
+  "version": "1.0.0",
+  "description": "Educational Quiz & Assessment Extension for Scratch",
+  "author": "Ignite ICT",
+  "license": "MIT",
+  "keywords": [
+    "scratch",
+    "education",
+    "quiz",
+    "assessment",
+    "blooms-taxonomy"
+  ]
+}

@@ -68,12 +68,12 @@ const StageHeaderComponent = function (props) {
         const stageButton = showBranding ? (
             <div className={styles.embedScratchLogo}>
                 <a
-                    href="https://scratch.mit.edu"
+                    href="https://igniteict.com"
                     rel="noopener noreferrer"
                     target="_blank"
                 >
                     <img
-                        alt="Scratch"
+                        alt="Ignite ICT"
                         src={scratchLogo}
                     />
                 </a>

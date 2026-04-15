@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Book shape -->
+  <path d="M4 4 C4 4 4 28 4 28 C4 28 14 26 16 26 C18 26 28 28 28 28 L28 4 C28 4 18 6 16 6 C14 6 4 4 4 4 Z" fill="#1E3A5F"/>
+  <!-- Book spine -->
+  <line x1="16" y1="6" x2="16" y2="26" stroke="#4A7DFF" stroke-width="1"/>
+  <!-- Left page -->
+  <path d="M5 5 C5 5 14 7 16 7 L16 25 C14 25 5 27 5 27 Z" fill="#4A7DFF" opacity="0.3"/>
+  <!-- Tablet overlay -->
+  <rect x="11" y="8" width="10" height="14" rx="1.5" fill="#4A7DFF" stroke="#1E3A5F" stroke-width="0.5"/>
+  <!-- Tablet screen -->
+  <rect x="12.5" y="10" width="7" height="9.5" rx="0.5" fill="white"/>
+  <!-- Tablet home button -->
+  <circle cx="16" cy="21" r="0.7" fill="white"/>
+</svg>

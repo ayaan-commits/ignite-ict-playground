@@ -318,7 +318,7 @@ export function getFrameworksForSubject(subject: string): string[] {
   return FRAMEWORKS[subject] || FRAMEWORKS.Other;
 }
 
-export function getBloomsVerbs(level: BloomsLevel): string[] {
+export function getBloomsVerbs(level: BloomsLevel): readonly string[] {
   return BLOOMS_TAXONOMY[level].verbs;
 }
 

@@ -87,7 +87,7 @@ import aboutIcon from './icon--about.svg';
 import fileIcon from './icon--file.svg';
 import editIcon from './icon--edit.svg';
 
-import scratchLogo from './igniteict-logo.png';
+import scratchLogo from './igniteict-logo.svg';
 import ninetiesLogo from './nineties_logo.svg';
 import catLogo from './cat_logo.svg';
 import prehistoricLogo from './prehistoric-logo.svg';
@@ -587,17 +587,22 @@ class MenuBar extends React.Component {
                 )}
             >
                 <div className={styles.mainMenu}>
-                    <div className={styles.fileGroup}>
+                    <div className={styles.fileGroup} role="navigation" aria-label="Main menu">
                         <div className={classNames(styles.menuBarItem)}>
                             <img
                                 id="logo_img"
-                                alt="Scratch"
+                                alt="Ignite ICT - Home"
                                 className={classNames(styles.scratchLogo, {
                                     [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
                                 })}
                                 draggable={false}
                                 src={this.props.logo}
                                 onClick={this.props.onClickLogo}
+                                role={this.props.onClickLogo ? 'button' : undefined}
+                                tabIndex={this.props.onClickLogo ? 0 : undefined}
+                                onKeyPress={this.props.onClickLogo ? (e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') this.props.onClickLogo();
+                                } : undefined}
                             />
                         </div>
                         {(this.props.canChangeTheme || this.props.canChangeLanguage) && (<SettingsMenu

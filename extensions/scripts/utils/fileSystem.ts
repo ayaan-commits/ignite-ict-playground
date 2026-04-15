@@ -29,15 +29,20 @@ export const extensionsSrc = path.join(extensionsFolder, "src");
 export const commonDirectory = path.join(extensionsSrc, "common");
 export const componentsDirectory = path.join(commonDirectory, "components");
 
-export const extensionGlob = (query: string) => glob(path.join(extensionsSrc, query));
+export const extensionGlob = async (query: string) => {
+  const results = await glob(path.join(extensionsSrc, query));
+  return results.map(p => path.resolve(p));
+};
 
 const hasIndex = (dirPath: string) => fs.existsSync(path.join(dirPath, "index.ts"));
 
 export const extensionPathIsValid = (dir: string) => {
-  const invalidDirs = [extensionsSrc, commonDirectory, templatesDirectory];
-  if (invalidDirs.includes(dir)) return false;
-  if (path.dirname(dir) !== extensionsSrc) return false;
-  if (dir.startsWith(commonDirectory) || dir.startsWith(templatesDirectory)) return false;
+  const norm = (p: string) => path.resolve(p);
+  const invalidDirs = [extensionsSrc, commonDirectory, templatesDirectory].map(norm);
+  const normalizedDir = norm(dir);
+  if (invalidDirs.includes(normalizedDir)) return false;
+  if (norm(path.dirname(dir)) !== norm(extensionsSrc)) return false;
+  if (normalizedDir.startsWith(norm(commonDirectory)) || normalizedDir.startsWith(norm(templatesDirectory))) return false;
   if (!hasIndex(dir)) return false;
   return true;
 }

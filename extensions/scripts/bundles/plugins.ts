@@ -75,7 +75,7 @@ export const setupExtensionBundleEntry = ({ indexFile, bundleEntry, directory }:
   return {
     name: "Setup Bundle Entry",
     buildStart() {
-      const svelteFiles = glob.sync(`${directory}/**/*.svelte`);
+      const svelteFiles = glob.sync(`${directory}/**/*.svelte`).map(f => path.resolve(f));
       const filesToBundle = svelteFiles
         .map(file => ({ path: file, name: fileName(file) }))
         .map(toNamedDefaultExport);
